@@ -59,8 +59,17 @@ class _HomePageState extends State<HomePage> {
 
       setState(() {
         _currentAddress =
-            "${place.locality}, ${place.postalCode}, ${place.country}";
+            "${place.locality}, ${place.administrativeArea} ${place.postalCode}, ${place.country}";
       });
+      print(place.country);
+      print(place.position);
+      print(place.locality);
+      print(place.postalCode);
+      print(place.name);
+      print(place.isoCountryCode);
+      print(place.subLocality);
+      print(place.subThoroughfare);
+      print(place.thoroughfare);
     } catch (e) {
       print(e);
     }
